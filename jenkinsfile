@@ -5,14 +5,16 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                npm install
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+                npm run test
             }
         }
-        stage('Deploy') {
+        stage('Resut') {
             steps {
                 echo 'Deploying....'
             }
